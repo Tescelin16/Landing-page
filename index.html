@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Baigorri</title>
+    <!-- Boostrap v5.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1 id="titulo">Desafío Técnico <span>IngerTec</span></h1>
+    <section>
+        <div id="contenedor" class="row">
+            <div class="col">
+                <div class="row imgs">
+                    <img class="imgCol" id="1" src="./assets/img/city-night.png" type="button"
+                        onclick="openWindow(1, 'City Night', './assets/img/city-night.png')">
+                </div>
+                <div class="row">
+                    <p class="bi bi-eye-fill" id="carrier_1">0</p>
+                </div>
+                <div class="row">
+                    <p>Las ciudades se transforman de un modo casi mágico a través de las horas del día, a través de los
+                        cambios de luz, del ritmo del tráfico y del ajetreo de los caminantes. Y si el día es
+                        fascinante, las noches tienen algo aún más mágico, más misterioso, dual, vivo, enérgico,
+                        tranquilo y solitario.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row imgs">
+                    <img class="imgCol" id="2" data-bs-toggle="modal" type="button" data-bs-target="#img2"
+                        onClick="updateCounter(2)" src="./assets/img/city-night-2.png" alt="">
+                </div>
+                <div class="row">
+                    <p class="bi bi-eye-fill" id="carrier_2">0</p>
+                </div>
+                <div class="row">
+                    <p>No sé si alguna vez habrás pensado en la noche como un motivo fotográfico, pero lo cierto es que
+                        si te atreves a ello, te depara imágenes únicas, escenarios insólitos, ambientes diferentes y
+                        contrastes inimaginables. En definitiva, la noche tiene una atmósfera única</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row imgs">
+                    <img class="imgCol" id="3" src="./assets/img/city-night-3.png" type="button"
+                        onclick="openWindow(3, 'City Night 3', './assets/img/city-night-3.png')">
+                </div>
+                <div class="row">
+                    <p class="bi bi-eye-fill" id="carrier_3">0</p>
+                </div>
+                <div class="row">
+                    <p>Lo ideal para cualquier turista es disponer del tiempo suficiente para conocer un destino al
+                        completo tanto de día como de noche. De esta manera, tenemos la oportunidad de contemplar los
+                        contrastes, de conocer los cambios que existen entre unos momentos del día y otros</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row imgs">
+                    <img class="imgCol" id="4" onClick="updateCounter(4)" type="button" data-bs-toggle="modal"
+                        data-bs-target="#img4" src="./assets/img/futurista-1.png" alt="">
+                </div>
+                <div class="row">
+                    <p class="bi bi-eye-fill" id="carrier_4">0</p>
+                </div>
+                <div class="row">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, repellendus dolor architecto
+                        harum saepe quis voluptatum quidem aliquam temporibus ea dignissimos recusandae aliquid
+                        laudantium et ipsa sequi. Libero harum officiis repudiandae explicabo dignissimos, tempora,
+                        error reiciendis rerum incidunt id et, quidem eum minus blanditiis eaque.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row imgs">
+                    <img class="imgCol" id="5 " src="./assets/img/futurista-2.png" type="button"
+                        onclick="openWindow(5, 'Futuristic City', './assets/img/futurista-2.png')">
+                </div>
+                <div class="row">
+                    <p class="bi bi-eye-fill" id="carrier_5">0</p>
+                </div>
+                <div class="row">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos expedita neque maiores
+                        porro cum voluptas asperiores. Fugit, nesciunt labore. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <!-- Image 2 -->
+        <div tabindex="-1" aria-labelledby="img2" aria-hidden="true" class="modal fade" id="img2">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img id="2" src="./assets/img/city-night-2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div tabindex="-1" aria-labelledby="img4" aria-hidden="true" class="modal fade" id="img4">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <img id="4" src="./assets/img/futurista-1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="text">
+        <button id="button" class="btn btn-dark">Cargar Texto</button>
+        <textarea id="res" cols="75" rows="3" name=""></textarea>
+    </section>
+
+    <footer>
+        <p> &copy Copyright 2022 Franco Baigorri</p>
+    </footer>
+    <!-- Scripts -->
+
+    <!-- Script archivo js -->
+    <script src="script.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
